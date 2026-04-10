@@ -7,11 +7,11 @@ public class Job_scheduling_problem {
     List<Elemento> populacao = new ArrayList<Elemento>();
     List<Integer> selecionados = new ArrayList<Integer>();
     private final Random r = new Random();
-    final double ideal = 45.0; // Preco ideal em reais
-    final int POPULACAO = 100; // Aumentado de 50 para 100
-    final int SELECAO = 30; // Aumentado de 20 para 30
-    static final int EPOCAS = 200; // Aumentado de 100 para 200
-    static final int MUTANTES = 100; // Aumentado de 20 para 30
+    final double ideal = 45.0;
+    final int POPULACAO = 100;
+    final int SELECAO = 30;
+    static final int EPOCAS = 200;
+    static final int MUTANTES = 100;
     static final boolean MELHORES = true;
     static final boolean PIORES = false;
     static boolean DEBUG = true;
