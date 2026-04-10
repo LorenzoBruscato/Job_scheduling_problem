@@ -281,8 +281,12 @@ class Elemento {
     }
 
     /**
-     * Exibe todas as informações do escalonamento: - Ordem dos jobs - Tempos
-     * acumulados - Deadlines - Status de entrega (✓ ou ✗) - Lucro total
+     * Exibe todas as informações do escalonamento: 
+     * - Ordem dos jobs 
+     * - Tempos acumulados 
+     * - Deadlines 
+     * - Status de entrega (true = no prazo, false = atrasado)
+     * - Lucro total
      */
     void mostrarInformacoes() {
         System.out.print("JOBS: ");
@@ -317,17 +321,17 @@ class Elemento {
             }
         }
 
-        // Exibe status de cada job (✓ = entregue no prazo, ✗ = atrasado)
+        // Exibe status de cada job (T = entregue no prazo, F = atrasado)
         System.out.print(" | STATUS: ");
         tempoAtual = 0;
         for (int i = 0; i < 5; i++) {
             int jobId = elemento[i];
             tempoAtual += tempos[jobId];
             if (tempoAtual <= deadline[jobId]) {
-                System.out.print("✓");
+                System.out.print("T");
                 valorTotal += valores[jobId];
             } else {
-                System.out.print("✗");
+                System.out.print("F");
             }
             if (i < 4) {
                 System.out.print("/");
